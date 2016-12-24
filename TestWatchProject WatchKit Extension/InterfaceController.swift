@@ -45,13 +45,16 @@ class InterfaceController: WKInterfaceController {
     @IBAction func btnClicked() {
         var newPrice:String?
         
-        presentTextInputController(withSuggestions: ["57.25"], allowedInputMode: .plain,
+        presentTextInputController(withSuggestions: ["Be Generous"], allowedInputMode: .plain,
             completion: { (price) -> Void in
                 if (price != nil) {
                     newPrice = price?[0] as? String
                 }
                 if (newPrice == nil) {
                     newPrice = "0.00"
+                }
+                else {
+                    newPrice = newPrice?.replacingOccurrences(of: "$", with: "")
                 }
                 self.mealCost = Float(newPrice!)
                 if (self.mealCost != nil) {
