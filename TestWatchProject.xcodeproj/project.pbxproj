@@ -19,6 +19,7 @@
 		4A8B3F411E0E475C007244A5 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B3F401E0E475C007244A5 /* InterfaceController.swift */; };
 		4A8B3F431E0E475C007244A5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B3F421E0E475C007244A5 /* ExtensionDelegate.swift */; };
 		4A8B3F451E0E475C007244A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B3F441E0E475C007244A5 /* Assets.xcassets */; };
+		4A8B3F5B1E0E4995007244A5 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B3F5A1E0E4995007244A5 /* CalculatorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		4A8B3F421E0E475C007244A5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		4A8B3F441E0E475C007244A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A8B3F461E0E475C007244A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8B3F5A1E0E4995007244A5 /* CalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				4A8B3F311E0E475C007244A5 /* Interface.storyboard */,
 				4A8B3F341E0E475C007244A5 /* Assets.xcassets */,
 				4A8B3F361E0E475C007244A5 /* Info.plist */,
+				4A8B3F5A1E0E4995007244A5 /* CalculatorController.swift */,
 			);
 			path = "TestWatchProject WatchKit App";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 					4A8B3F2B1E0E475C007244A5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 73F8KXXA92;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					4A8B3F3A1E0E475C007244A5 = {
@@ -293,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A8B3F201E0E475C007244A5 /* ViewController.swift in Sources */,
+				4A8B3F5B1E0E4995007244A5 /* CalculatorController.swift in Sources */,
 				4A8B3F1E1E0E475C007244A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,13 +484,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 73F8KXXA92;
 				IBSC_MODULE = TestWatchProject_WatchKit_Extension;
 				INFOPLIST_FILE = "TestWatchProject WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wedgwoodtom.TestWatchProject.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
@@ -497,9 +505,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 73F8KXXA92;
 				IBSC_MODULE = TestWatchProject_WatchKit_Extension;
 				INFOPLIST_FILE = "TestWatchProject WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wedgwoodtom.TestWatchProject.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -516,6 +526,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73F8KXXA92;
 				INFOPLIST_FILE = TestWatchProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wedgwoodtom.TestWatchProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,6 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73F8KXXA92;
 				INFOPLIST_FILE = TestWatchProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wedgwoodtom.TestWatchProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

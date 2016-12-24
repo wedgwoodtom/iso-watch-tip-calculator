@@ -1,14 +1,45 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TestWatchProject_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Enter Bill Amount" id="s46-y9-YLK">
+                            <connections>
+                                <action selector="btnClicked" destination="AgC-eL-Hgc" id="KLF-ef-4Cl"/>
+                            </connections>
+                        </button>
+                        <slider width="1" alignment="left" continuous="YES" value="15" maximum="50" steps="50" id="AVi-BE-Fiu">
+                            <connections>
+                                <action selector="sliderChanged:" destination="AgC-eL-Hgc" id="dtg-QN-XHY"/>
+                            </connections>
+                        </slider>
+                        <label width="1" alignment="left" text="with 15% tip" textAlignment="center" id="Abb-hn-QuZ">
+                            <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label width="1" alignment="left" text="$ 0.00" textAlignment="center" id="ce9-hL-CvJ">
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="amountButton" destination="s46-y9-YLK" id="InZ-PO-hu2"/>
+                        <outlet property="tipLabel" destination="Abb-hn-QuZ" id="yTq-Gh-vu9"/>
+                        <outlet property="tipSlider" destination="AVi-BE-Fiu" id="Nti-0M-S8f"/>
+                        <outlet property="totalLabel" destination="ce9-hL-CvJ" id="nW5-eb-Oni"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>
