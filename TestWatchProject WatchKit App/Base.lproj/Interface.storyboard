@@ -14,17 +14,26 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TestWatchProject_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Enter Bill Amount" id="s46-y9-YLK">
+                        <button width="1" height="26" alignment="left" title="Enter Bill Amount" id="s46-y9-YLK">
                             <connections>
                                 <action selector="btnClicked" destination="AgC-eL-Hgc" id="KLF-ef-4Cl"/>
                             </connections>
                         </button>
-                        <slider width="1" alignment="left" continuous="YES" value="15" maximum="50" steps="50" id="AVi-BE-Fiu">
+                        <slider width="1" height="26" alignment="left" continuous="YES" value="15" maximum="50" steps="50" id="AVi-BE-Fiu">
                             <connections>
                                 <action selector="sliderChanged:" destination="AgC-eL-Hgc" id="dtg-QN-XHY"/>
                             </connections>
                         </slider>
                         <label width="1" alignment="left" text="with 15% tip" textAlignment="center" id="Abb-hn-QuZ">
+                            <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <slider width="1" height="26" alignment="left" continuous="YES" value="1" maximum="15" steps="15" id="IAw-FI-2OC">
+                            <connections>
+                                <action selector="patronsSliderChanged:" destination="AgC-eL-Hgc" id="ZiL-tc-0h5"/>
+                            </connections>
+                        </slider>
+                        <label width="1" alignment="left" text="and 1 patron" textAlignment="center" id="szc-we-LeR">
                             <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
@@ -35,12 +44,14 @@
                     </items>
                     <connections>
                         <outlet property="amountButton" destination="s46-y9-YLK" id="InZ-PO-hu2"/>
+                        <outlet property="patronsLabel" destination="szc-we-LeR" id="Bgd-so-bbd"/>
                         <outlet property="tipLabel" destination="Abb-hn-QuZ" id="yTq-Gh-vu9"/>
                         <outlet property="tipSlider" destination="AVi-BE-Fiu" id="Nti-0M-S8f"/>
                         <outlet property="totalLabel" destination="ce9-hL-CvJ" id="nW5-eb-Oni"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="147" y="6"/>
         </scene>
     </scenes>
 </document>

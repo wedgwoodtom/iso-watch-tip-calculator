@@ -20,8 +20,11 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var tipLabel: WKInterfaceLabel!
     
+    @IBOutlet var patronsLabel: WKInterfaceLabel!
+    
     var mealCost: Float?
     var tipPercent: Float = 15.0
+    var patrons: Float = 1.0
     
 
     override func awake(withContext context: Any?) {
@@ -70,6 +73,16 @@ class InterfaceController: WKInterfaceController {
         updateFinalCost()
     }
     
+    @IBAction func patronsSliderChanged(_ value: Float) {
+        let patronsInt = Int(value)
+        
+        if (patronsInt > 0) {
+            patrons = value
+            patronsLabel.setText("and \(patronsInt) patron" + (patronsInt > 1 ? "s" : ""))
+            updateFinalCost()
+        }
+    }
+    
     func updateFinalCost() {
         guard mealCost != nil else {
             totalLabel.setText("$ 0.00")
@@ -81,7 +94,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     func finalCost() -> Float {
-        return mealCost! + tipPercent / 100.0 * mealCost!
+        return (mealCost! + tipPercent / 100.0 * mealCost!) / patrons
     }
     
 }
