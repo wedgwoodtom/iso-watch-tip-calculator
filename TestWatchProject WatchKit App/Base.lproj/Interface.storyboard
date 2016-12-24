@@ -14,12 +14,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TestWatchProject_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" height="26" alignment="left" title="Enter Bill Amount" id="s46-y9-YLK">
+                        <button width="1" height="30" alignment="left" title="Enter Bill Amount" id="s46-y9-YLK">
                             <connections>
                                 <action selector="btnClicked" destination="AgC-eL-Hgc" id="KLF-ef-4Cl"/>
                             </connections>
                         </button>
-                        <slider width="1" height="26" alignment="left" continuous="YES" value="15" maximum="50" steps="50" id="AVi-BE-Fiu">
+                        <slider width="1" height="28" alignment="left" continuous="YES" value="15" maximum="50" steps="50" id="AVi-BE-Fiu">
                             <connections>
                                 <action selector="sliderChanged:" destination="AgC-eL-Hgc" id="dtg-QN-XHY"/>
                             </connections>
@@ -28,7 +28,7 @@
                             <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
-                        <slider width="1" height="26" alignment="left" continuous="YES" value="1" maximum="15" steps="15" id="IAw-FI-2OC">
+                        <slider width="1" height="28" alignment="left" continuous="YES" value="1" maximum="15" steps="15" id="IAw-FI-2OC">
                             <connections>
                                 <action selector="patronsSliderChanged:" destination="AgC-eL-Hgc" id="ZiL-tc-0h5"/>
                             </connections>
