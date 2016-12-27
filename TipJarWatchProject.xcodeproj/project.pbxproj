@@ -238,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A8B3F151E0E475C007244A5 /* Build configuration list for PBXProject "TestWatchProject" */;
+			buildConfigurationList = 4A8B3F151E0E475C007244A5 /* Build configuration list for PBXProject "TipJarWatchProject" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -547,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A8B3F151E0E475C007244A5 /* Build configuration list for PBXProject "TestWatchProject" */ = {
+		4A8B3F151E0E475C007244A5 /* Build configuration list for PBXProject "TipJarWatchProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A8B3F471E0E475C007244A5 /* Debug */,
