@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,7 +24,7 @@
                                 <action selector="sliderChanged:" destination="AgC-eL-Hgc" id="dtg-QN-XHY"/>
                             </connections>
                         </slider>
-                        <label width="1" alignment="left" text="with 15% tip" textAlignment="center" id="Abb-hn-QuZ">
+                        <label width="1" alignment="left" text="15% tip" textAlignment="center" id="Abb-hn-QuZ">
                             <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
@@ -33,17 +33,22 @@
                                 <action selector="patronsSliderChanged:" destination="AgC-eL-Hgc" id="ZiL-tc-0h5"/>
                             </connections>
                         </slider>
-                        <label width="1" alignment="left" text="and 1 patron" textAlignment="center" id="szc-we-LeR">
+                        <label width="1" alignment="left" text="1 person" textAlignment="center" id="szc-we-LeR">
                             <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
-                        <label width="1" alignment="left" text="$ 0.00" textAlignment="center" id="ce9-hL-CvJ">
+                        <label width="1" alignment="left" text="$ 0.00 each" textAlignment="center" id="ce9-hL-CvJ">
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="1" height="16" alignment="left" textAlignment="center" id="ahg-uG-Id3">
+                            <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
                     <connections>
                         <outlet property="amountButton" destination="s46-y9-YLK" id="InZ-PO-hu2"/>
+                        <outlet property="costBreakdownLabel" destination="ahg-uG-Id3" id="fob-Lk-maH"/>
                         <outlet property="patronsLabel" destination="szc-we-LeR" id="Bgd-so-bbd"/>
                         <outlet property="tipLabel" destination="Abb-hn-QuZ" id="yTq-Gh-vu9"/>
                         <outlet property="tipSlider" destination="AVi-BE-Fiu" id="Nti-0M-S8f"/>
@@ -51,7 +56,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="147" y="6"/>
+            <point key="canvasLocation" x="147" y="5.5"/>
         </scene>
     </scenes>
 </document>

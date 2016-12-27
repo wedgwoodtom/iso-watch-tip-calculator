@@ -19,7 +19,6 @@
 		4A8B3F411E0E475C007244A5 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B3F401E0E475C007244A5 /* InterfaceController.swift */; };
 		4A8B3F431E0E475C007244A5 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B3F421E0E475C007244A5 /* ExtensionDelegate.swift */; };
 		4A8B3F451E0E475C007244A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B3F441E0E475C007244A5 /* Assets.xcassets */; };
-		4A8B3F5B1E0E4995007244A5 /* CalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B3F5A1E0E4995007244A5 /* CalculatorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,6 @@
 		4A8B3F421E0E475C007244A5 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		4A8B3F441E0E475C007244A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A8B3F461E0E475C007244A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A8B3F5A1E0E4995007244A5 /* CalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +139,6 @@
 				4A8B3F311E0E475C007244A5 /* Interface.storyboard */,
 				4A8B3F341E0E475C007244A5 /* Assets.xcassets */,
 				4A8B3F361E0E475C007244A5 /* Info.plist */,
-				4A8B3F5A1E0E4995007244A5 /* CalculatorController.swift */,
 			);
 			path = "TestWatchProject WatchKit App";
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A8B3F201E0E475C007244A5 /* ViewController.swift in Sources */,
-				4A8B3F5B1E0E4995007244A5 /* CalculatorController.swift in Sources */,
 				4A8B3F1E1E0E475C007244A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +563,7 @@
 				4A8B3F4B1E0E475C007244A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A8B3F4D1E0E475C007244A5 /* Build configuration list for PBXNativeTarget "TestWatchProject WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +572,7 @@
 				4A8B3F4F1E0E475C007244A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A8B3F511E0E475C007244A5 /* Build configuration list for PBXNativeTarget "TestWatchProject" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +581,7 @@
 				4A8B3F531E0E475C007244A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -22,6 +22,8 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var patronsLabel: WKInterfaceLabel!
     
+    @IBOutlet var costBreakdownLabel: WKInterfaceLabel!
+    
     var mealCost: Float?
     var tipPercent: Float = 15.0
     var patrons: Float = 1.0
@@ -29,10 +31,6 @@ class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
-//        tipSlider.setValue(tipPercent)
-//        updateFinalCost()
     }
     
     override func willActivate() {
@@ -54,14 +52,14 @@ class InterfaceController: WKInterfaceController {
                     newPrice = price?[0] as? String
                 }
                 if (newPrice == nil) {
-                    newPrice = "0.00"
+                    newPrice = "N"
                 }
                 else {
                     newPrice = newPrice?.replacingOccurrences(of: "$", with: "")
                 }
                 self.mealCost = Float(newPrice!)
                 if (self.mealCost != nil) {
-                    self.amountButton.setTitle("Bill $ " + String(format: "%.2f", self.mealCost!))
+                    self.amountButton.setTitle("Bill = $" + String(format: "%.2f", self.mealCost!))
                 }
                 self.updateFinalCost()
         })
@@ -69,7 +67,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func sliderChanged(_ value: Float) {
         tipPercent = value
-        tipLabel.setText( "with \(Int(tipPercent))% tip")
+        tipLabel.setText( "\(Int(tipPercent))% tip")
         updateFinalCost()
     }
     
@@ -78,7 +76,6 @@ class InterfaceController: WKInterfaceController {
         
         if (patronsInt > 0) {
             patrons = value
-            patronsLabel.setText("and \(patronsInt) patron" + (patronsInt > 1 ? "s" : ""))
             updateFinalCost()
         }
     }
@@ -87,14 +84,31 @@ class InterfaceController: WKInterfaceController {
         guard mealCost != nil else {
             totalLabel.setText("$ 0.00")
             amountButton.setTitle("Enter Bill Amount")
+            costBreakdownLabel.setText("")
             return
         }
+    
+        let numPatrons = Int(patrons)
+        let totalTip = tipPercent / 100.0 * mealCost! + 0.004
+        let totalCost =  mealCost! + totalTip
+        let totalCostPerPatron = totalCost / patrons
+        let mealCostPerPatron = mealCost! / patrons
+        let tipPerPatron = totalTip / patrons
         
-        totalLabel.setText("$ " + String(format: "%.2f", finalCost()))
+        tipLabel.setText( "\(Int(tipPercent))% tip = $\(String(format: "%.2f", totalTip))")
+        
+        patronsLabel.setText("\(numPatrons) " + (numPatrons > 1 ? " split $\(String(format: "%.2f", totalCost )) for" : "Person"))
+
+        
+        totalLabel.setText("$ " + String(format: "%.2f", totalCostPerPatron) + (numPatrons > 1 ? " each" : ""))
+        
+        costBreakdownLabel.setHidden(numPatrons == 1)
+        
+        costBreakdownLabel.setText(
+            "$" + String(format: "%.2f", mealCostPerPatron )
+                + " + "
+                + "$" + String(format: "%.2f", tipPerPatron) + " tip")
     }
     
-    func finalCost() -> Float {
-        return (mealCost! + tipPercent / 100.0 * mealCost!) / patrons
-    }
-    
+
 }
